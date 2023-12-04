@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 import tracksList from "../assets/tracksList";
 
-
+const audio = new Audio();
 
 
 export const AudioContext =createContext({});
 
 const AudioProvider = ((children)) => {
     const  [currentTrack, setCurrentTrack] = useState(tracksList[0]);
-    const [isPlaying, setPlaying] = useState(false);
+    const  [isPlaying, setPlaying] = useState(false);
 
     const handleToggleAudio = (track) => {
         console.log("Клик");
