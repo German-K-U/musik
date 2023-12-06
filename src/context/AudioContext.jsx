@@ -11,7 +11,7 @@ const AudioProvider = ((children)) => {
     const  [isPlaying, setPlaying] = useState(false);
 
     const handleToggleAudio = (track) => {
-        console.log("Клик");
+        console.log("Клик1");
     };
 
     const value = {currentTrack, isPlaying, handleToggleAudio};
