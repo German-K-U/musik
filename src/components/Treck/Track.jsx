@@ -15,8 +15,8 @@ const  Track = (track) => {
 
     return (
     <div className={style.track}>
-        <IconButton onClick={()=> handleToggleAudio(track)}>
-            <PlayArrow/>
+        <IconButton onClick={() => handleToggleAudio(track)}>
+            <PlayArrow />
         </IconButton>
         <img className={style.preview} src={preview} alt = "" />  
         <div className={style.credits}>

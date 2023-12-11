@@ -11,7 +11,24 @@ const AudioProvider = ({children}) => {
     const  [isPlaying, setPlaying] = useState(false);
 
     const handleToggleAudio = (track) => {
-        console.log("Клик1");
+       if(currentTrack.id !== track.id){
+        setCurrentTrack(track);
+        setPlaying(true);
+
+        audio.src = track.src;
+        audio.currentTime = 0;
+        audio.play();
+
+        return;
+       }
+       
+        if (isPlaying){
+            audio.pause();
+            setPlaying(false);
+        } else {
+            audio.play();
+            setPlaying(true);
+        }
     };
 
     const value = {currentTrack, isPlaying, handleToggleAudio};
