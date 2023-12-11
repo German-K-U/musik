@@ -6,7 +6,7 @@ const audio = new Audio();
 
 export const AudioContext =createContext({});
 
-const AudioProvider = ((children)) => {
+const AudioProvider = ({children}) => {
     const  [currentTrack, setCurrentTrack] = useState(tracksList[0]);
     const  [isPlaying, setPlaying] = useState(false);
 
